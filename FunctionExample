@@ -1,0 +1,10 @@
+//Program-
+// function to calculat arithmetic series, d and a are default parameter values
+fun arithmeticSeriesSum(a: Int = 1, n: Int, d: Int = 1): Int {
+    return n/2 * (2*a + (n-1)*d)
+}
+// calling function, passing 10 as parameter
+arithmeticSeriesSum(n=10)
+
+// Output
+//55
