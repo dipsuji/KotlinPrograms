@@ -10,7 +10,7 @@ fun arithmeticSeriesSum(a: Int = 1, n: Int, d: Int = 1): Int {
 arithmeticSeriesSum(n=10)  // Result = 55
 
 //you can call the function with all the parameters like this -
-arithmeticSeriesSum(a=2, n=10, d=2)  // Result = 120"
+arithmeticSeriesSum(a=2, n=10, d=2)  // Result = 110"
 
 //You can also reorder the arguments if you’re specifying the names -
 
@@ -18,8 +18,19 @@ arithmeticSeriesSum(n=10, d=2, a=2)  // Result = 110"
 
 //You can use a mix of named arguments and position-based arguments as long as all the position-based arguments are placed before the named arguments -
 
-arithmeticSeriesSum(2, n=10)  // Result = 75"
+arithmeticSeriesSum(2, n=10)  // Result = 65"
 
 //The following function call is not allowed since it contains position-based arguments after named arguments -
 
 arithmeticSeriesSum(n=10, 2) // error: mixing named and positioned arguments is not allowed"
+
+//Another example-
+fun findVolume(length:Int,breath:Int,height:Int=10):Int{
+    return length*breath*height
+}
+var result1 = findVolume(2,3)
+print(result)
+
+//you can call the function with all the parameters like this -
+var result2 = findVolume(2,3,20)        //override the default value
+print(result)
