@@ -1,0 +1,25 @@
+//Calculator class is having two functions name is add, subtract.
+class Calculator{
+    fun add(a: Int, b: Int): Int{
+        return a+b
+    }
+
+    fun subtract(a: Int, b: Int): Int{
+        return a-b
+    }
+}
+
+//Using extensions in Kotlin, we have added a new function, name is multiplication, to the Calculator class.
+
+fun Calculator.multiply(a: Int, b: Int): Int{
+    return a*b
+}
+var a=10
+var b=5
+var calc:Calculator = Calculator()
+
+println(calc.add(a,b))  // result is 15
+
+println(calc.subtract(a,b)) // result is 5
+
+println(calc.multiply(a,b)) // result is 50
