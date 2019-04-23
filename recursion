@@ -11,3 +11,16 @@ fun factorial(n: Int): Long {
     return if (n == 1) n.toLong()
         else n*factorial(n-1)
 }
+
+
+//Second example-
+
+fun main(args: Array<String>) {
+    var num = 4
+    var result = fibonacci(num, 1, 2)
+    println("fibonacci upto $num = $result")
+}
+
+fun fibonacci(n: Int, a: Long, b: Long): Long {
+    return if (n == 0) b else fibonacci(n-1, a+b, a)
+}
