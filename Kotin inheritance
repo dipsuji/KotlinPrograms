@@ -1,0 +1,59 @@
+//Inheritance is one of the key concepts of Object Oriented Programming . 
+//Inheritance enables re-usability. It allows a class to inherit features from another class.
+
+//The class that inherits the features of another class is called the Child class or Derived class or Sub class.
+//Class whose features are inherited is called the Parent class or Base class or Super class.
+
+//Every class that you create in Kotlin implicitly inherits from Any -
+//The Any class contains some methods namely equals(), hashCode() and toString().
+//By default, all the classes in Kotlin are final (we can say non-inheritable).
+
+fun main(args: Array<String>) {
+    var dog = Dog()
+    dog.age = 6
+    dog.color = "dog -brown"
+    dog.bark()
+    dog.eat()
+    
+    var cat = Cat()
+    cat.breed = "European Burmese"
+    cat.color = "cat - red"
+    cat.meow()
+    cat.eat()
+    
+    var animals = Animals()
+    cat.color = "whiite"
+    cat.eat()
+    
+}
+
+//To allow a class to be inherited by others, you must use 'open' modifier.
+
+open class Animals{
+    var color: String = " "
+     
+    fun eat(){
+        println("eat")
+    }
+    
+}
+
+//The child class has the responsibility to initialize the parent class.
+
+class Dog:Animals(){
+    var age:Int = -1
+    
+    fun bark(){
+        println("dog bark")
+    }
+    
+       
+}
+    
+class Cat:Animals(){
+    var breed: String = ""
+    
+    fun meow(){
+        println("cat meow")
+    }
+}
