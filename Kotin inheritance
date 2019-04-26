@@ -57,3 +57,62 @@ class Cat:Animals(){
         println("cat meow")
     }
 }
+
+
+//Kotlin Overriding Properties and Methods during Inheritance.-
+
+//To allow a member function to be overridden, you need to mark it with the open modifier.
+//The derived class that overrides a base class function must use the override modifier, otherwise, the compiler will give an error -
+//You can access the properties and functions of the super class using super() keyword.
+
+fun main(args: Array<String>) {
+    var dog = Dog()
+    dog.eat() // Dog can eat
+    
+    var cat = Cat()
+    cat.eat() // Cat can eat
+    
+    var animals = Animals()
+    animals.eat() // Animals eating
+    
+}
+open class Animals{
+    var color: String = " "
+    
+    // Must use "open" modifier to allow child classes to override it 
+    open fun eat(){
+        println("Animals eating")
+    }
+    
+}
+
+
+class Dog:Animals(){
+    var age:Int = -1
+    
+    fun bark(){
+        println("dog bark")
+    }
+    // Must use "override" modifier to override a base class function
+    override fun eat(){
+        println("Dog can eat")
+    }
+    
+       
+}
+    
+class Cat:Animals(){
+    var breed: String = ""
+    
+    fun meow(){
+        println("cat meow")
+    }
+    // Must use "override" modifier to override a base class function
+    override fun eat(){
+        //You can access the properties and functions of the super class using super() keyword.
+        super.eat()
+        println("cat can eat")
+    }
+}
+
+          
